@@ -1,0 +1,14 @@
+.box{
+    height: 200px;
+    width: 200px;
+    background-color: orange;
+}
+.btn{
+    height: 50px;
+    width: 100px;
+}
+
+.transition{
+    border-radius: 20px ;
+    background-color: pink;
+}
