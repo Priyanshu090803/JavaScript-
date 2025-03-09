@@ -14,7 +14,7 @@ html,body{
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    background-image: linear-gradient(to right , rgb(92,145,229),rgb(143,43,45));
+    background-image: linear-gradient(to right , rgb(255, 255, 255),rgb(255, 255, 255));
     position: relative;
 }
 
@@ -34,8 +34,11 @@ html,body{
 }
 .copyCode{
     height: 10rem;
-    width: 40rem;
+    width: 100rem;
     position: absolute;
     top: 60%;
-    left: 35%;
+    left: 30%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(43, 21, 21);
 }
