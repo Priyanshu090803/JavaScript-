@@ -9,7 +9,7 @@ html,body{
 }
 .main{
     height: 100%;
-    width: 100%;
+    width: 100%;    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,12 +32,18 @@ html,body{
     border-radius: 5px;
     background-color: rgb(190, 240, 240);    
 }
+.copydiv{
+    border: 1px solid rgb(173, 173, 173);
+    /* height: 20rem;
+    width: 40rem; */
+    border-radius: 8px;
+}
 .copyCode{
-    height: 10rem;
-    width: 100rem;
-    position: absolute;
+        /* height: 10rem;
+        width: 49rem; */
+    /* position: absolute; */
     top: 60%;
-    left: 30%;
+    left: 26%;
     font-size: 1.5rem;
     font-weight: 700;
     color: rgb(43, 21, 21);

@@ -32,4 +32,7 @@ let btn2=()=>{
 
 left.addEventListener("click",btn1);
 right.addEventListener("click",btn2);
+copyCode.addEventListener("click",()=>{
+    navigator.clipboard.writeText(copyCode.innerText);
+})
 

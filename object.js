@@ -17,9 +17,26 @@
 // const obj= new Date();
 // console.log(`${obj.getDate()}: ${obj.getFullYear()} ${obj.getMonth()}`)
 
-const obj = new Object();
+// const obj = new Object();
     
-      obj.firstName= "priyanshu"
-      obj["last Name"] = "tamta"
+//       obj.firstName= "priyanshu"
+//       obj["last Name"] = "tamta"
 
-      console.log(ob)
+//       console.log(ob)
+// const person={
+//       "name":"priyanshu",
+//       check(){
+//             return(`my name is ${this.name}`)
+//       }
+// }
+
+// console.log(person.check());
+
+
+
+function person(firstName,lastName){
+      this.fName=firstName;
+      this.lName=lastName;
+}
+let name1=person("priyanshu","tamta");
+console.log(name1.firstName)
