@@ -2,22 +2,48 @@ let input=document.querySelector(".input");
 let clickBtn=document.querySelector(".btn");
 let todo=document.querySelector(".todo");
 
+let localTodolist=[];
 
-clickBtn.addEventListener("click",()=>{
-    let para=document.createElement('p');   
-    // let btn=document.createElement('button');
-    todo.append(para)
-    // todo.append(btn)
-    para.textContent=input.value;
-    // btn.textContent="delete"
+let getItemFromLocal=()=>{
+    return JSON.parse(localStorage.getItem("todolist"))
+}
+localTodolist=getItemFromLocal() || [];
 
-    input.value="";
-    // btn.addEventListener('click',()=>{
-    //     btn.remove()
-    //     para.remove();
-    // })
-    todo.addEventListener("click",(event)=>{
-        event.target.remove();
-    })
 
+const addTodoDynamicElement=(value)=>{
+    let divEl=document.createElement('div'); 
+    divEl.classList.add("todo_div");
+    divEl.innerHTML=`<p>${value}</p><button class="dltBtn">Delete</button>`
+    todo.append(divEl)
+}
+
+
+const showTodo=()=>{
+    console.log(localTodolist);    
+}
+showTodo()
+
+localTodolist.forEach((value)=>{
+    addTodoDynamicElement(value)
+})
+
+clickBtn.addEventListener("click",(e)=>{
+
+    e.preventDefault();
+    let divEl=document.createElement('div'); 
+    const todoListvalue=input.value.trim();
+
+    localTodolist.push(todoListvalue)
+    localTodolist= [...new Set (localTodolist)]
+    console.log(localTodolist);
+
+    localStorage.setItem("todolist",JSON.stringify(localTodolist))
+
+
+    divEl.classList.add("todo_div");
+    divEl.innerHTML=`<p>${input.value}</p><button class="dltBtn">Delete</button>`
+    todo.append(divEl)
+
+    input.value=""
+    
 })
