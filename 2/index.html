@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .main{
+            height: 100vh;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            gap: 10px;
+        }
+        .btn{
+            cursor: pointer;
+            height: 50px;
+            width: 105px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <button class="btn" id="btn1">Setdata</button>
+        <button class="btn" id="btn2">Getdata</button>
+        <button class="btn" id="btn3">Removedata</button>
+    </div>
+
+    <script>
+
+        const data={
+            firstName:"priyanshu",
+            lastName:"tamta",
+            age:21,
+            gender:"male",
+            grade:"A",
+            courses:["js","python","c++"],
+            address:{
+                street:"Gic road",
+                city:"Pithoragarh",
+                state:"Uttrakhand"
+            }
+        }
+let btn1=document.querySelector("#btn1");
+let btn2=document.querySelector("#btn2");
+let btn3=document.querySelector("#btn3");
+
+const addData=()=>{
+    localStorage.setItem("set",JSON.stringify(data));
+   console.log("Added the data")
+
+}
+
+const getData=()=>{
+    const dataGet=JSON.parse(localStorage.getItem("set") )  
+    console.log(dataGet);
+ }
+const removeData=()=>{
+   const dltItem= localStorage.removeItem("set");
+   console.log(dltItem)
+}
+
+btn1.addEventListener("click",addData);
+btn2.addEventListener("click",getData);
+btn3.addEventListener("click",removeData);
+
+
+
+    </script>
+</body>
+</html>
