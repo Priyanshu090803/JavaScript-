@@ -32,18 +32,19 @@ clickBtn.addEventListener("click",(e)=>{
     e.preventDefault();
     let divEl=document.createElement('div'); 
     const todoListvalue=input.value.trim();
+    input.value=""
 
+   if( todoListvalue!="" && !localTodolist.includes(todoListvalue)) {
     localTodolist.push(todoListvalue)
     localTodolist= [...new Set (localTodolist)]
     console.log(localTodolist);
 
     localStorage.setItem("todolist",JSON.stringify(localTodolist))
-
+}
 
     divEl.classList.add("todo_div");
     divEl.innerHTML=`<p>${input.value}</p><button class="dltBtn">Delete</button>`
     todo.append(divEl)
 
-    input.value=""
     
 })
