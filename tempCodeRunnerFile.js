@@ -1,2 +1,2 @@
 
-        }).then((value)=>console.log(value))
+                if(operation=="multiply"){
