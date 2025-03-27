@@ -1,16 +1,33 @@
-
-function logic(){
+function updateFun(){
+    console.log("Added to cart");
+    
     document.getElementById("button").disabled=false;
-    console.log("User clicked")
+}
+function Throttle(fn,delay){
+    return function(...args){
+        document.getElementById("button").disabled=true;
+    setTimeout(() => {
+        fn(...args)
+    }, delay);
+    }
 }
 
-const myThrottle=(fn,delay)=>{
-        return function(...args){
-        document.getElementById("button").disabled=true
-        setTimeout(() => {
-            fn()
+const newFun = Throttle(updateFun,3000);
+
+
+function getData (){
+    console.log("Fething data")
+}
+function Debounce(fn,delay){
+    let timer;
+    return function (...args){
+        if(timer) {
+            clearTimeout(timer);
+         }
+       timer = setTimeout(() => {
+            fn(...args)
         }, delay);
     }
 }
 
-let newFun = myThrottle(logic,3000)
+const magicFun = Debounce(getData,3000)
