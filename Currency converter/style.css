@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@550&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --primary-color:#11121a;
+    --hover-color: #272832;
+    --accent-color: #0071FF;
+    --text-color: #c9c9c9;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color:var(--primary-color);
+}
+.container{
+    height: 100%;
+    width: 100%;
+    color: var(--text-color);
+    padding-left: 40%;
+    padding-top: 4%;
+}
+.container h1{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+form{
+    height: 80%;
+    width: 50%;
+    border: 2px solid white;
+    border-radius: 1rem;
+    padding:2% 0 0 1%;
+    background-color: #0c0d0f;
+    box-shadow: #e7e7e9;
+    position: relative;
+}
+.amount{
+    font-size: 2rem;
+    position: relative;
+}
+.amount p{
+    display: inline-block;
+}
+.amount input{
+    position: absolute;
+    margin-top: 2px;
+    margin-left: 8px;
+    height: 2rem;
+    width: 45%;
+    border-radius: 4px;
+    padding-left: 8px;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+}
+.amount input:hover{
+    background-color: rgb(234, 243, 240);
+}
+.dropdown{
+    height: 80%;
+    width: 98%;
+    margin-top: 10px;
+}
+.from{
+    display: flex;
+    height: 50%;
+    padding: 4rem 0 4rem 6rem;
+}
+.from p{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+.select-container-from{
+    display: flex;
+    height: 4rem;
+    gap: 1rem;
+}
+.select-container-from img{
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-top: .7rem;
+    border-radius: 2px;
+}
+.select-container-from select{
+    height: 1.7rem;
+    width: 3.5rem;
+    margin-top: 1rem;
+    border-radius: 2px;
+}
+i{
+    position: absolute;
+    left: 47%;
+    top: 48%;
+    font-size: 1.8rem;
+}
+.to{
+    display: flex;
+    height: 50%;
+    padding: 4rem 0 4rem 6rem;
+}
+.to p{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+.select-container-to{
+    display: flex;
+    height: 4rem;
+    gap: 1rem;
+}
+
+.select-container-to img{
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-top: .7rem;
+    border-radius: 2px;
+}
+.select-container-to select{
+    height: 1.7rem;
+    width: 3.5rem;
+    margin-top: 1rem;
+    border-radius: 2px;
+}
+.msg{
+    font-size: 1.8rem;
+    color: rgb(228, 162, 162);
+    display: flex;
+    display: inline-block;
+    margin-right: 2rem;
+}
+.Exchange{
+    position: absolute;
+    margin-top: .4rem;
+    right: 2%;
+    cursor: pointer;
+    height: 1.8rem;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #272832;
+}

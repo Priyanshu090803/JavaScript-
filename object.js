@@ -34,9 +34,33 @@
 
 
 
-function person(firstName,lastName){
-      this.fName=firstName;
-      this.lName=lastName;
+// function person(firstName,lastName){
+//       this.fName=firstName;
+//       this.lName=lastName;
+// }
+// let name1=new person("priyanshu","tamta");
+// console.log(name1.fName)
+
+
+// const hello = 'firstName';
+// const name= "akhsay";
+
+// const user ={
+//       hello:name
+// }
+// console.log(user.hello)
+
+let nums= {
+      a:100,
+      b:200,
+      title:"My num"
 }
-let name1=person("priyanshu","tamta");
-console.log(name1.firstName)
+function MulByTwo(obj){
+      for(key in obj){
+            if(typeof obj[key]==="number"){     
+                  obj[key]= obj[key]*2
+            }
+      }
+}
+MulByTwo(nums);
+console.log(nums);

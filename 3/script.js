@@ -38,4 +38,4 @@ let saveData=()=>{
 let showData=()=>{
    listContainer.innerHTML= localStorage.getItem("savedItem")
 }
-showData();
+showData(); 
